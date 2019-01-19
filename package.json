@@ -1,0 +1,15 @@
+{
+  "name": "billadt",
+  "version": "1.0.0",
+  "description": "testapi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "billpope",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
