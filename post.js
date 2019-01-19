@@ -26,7 +26,7 @@ request.postADP = function(left, right, id, operation, callback){
 		}
 	}
 
-	if(result && id && operation){
+	if(id){
 
     // Configure the request payload
     var payload = {
