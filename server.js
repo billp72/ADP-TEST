@@ -1,7 +1,6 @@
 
 const https = require("https");
 const stringDecoder = require("string_decoder").StringDecoder;
-const querystring = require('querystring');
 const request = require('./post');
 
 
