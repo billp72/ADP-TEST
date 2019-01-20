@@ -38,7 +38,7 @@ request.postADP = function(left, right, id, operation, callback){
         if(status == 200 || status == 201){
           callback(status);
         } else {
-          callback('Status code returned was '+status+" and id result: "+result);
+          callback('Status code returned was '+status+" and result: "+result);
         }
     });
 
