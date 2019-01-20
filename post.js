@@ -1,30 +1,12 @@
 const https = require("https");
 const querystring = require('querystring');
+const add = require('./calculate');
 
 var request = {}
 
 request.postADP = function(left, right, id, operation, callback){
-	var result=0;
-	if(typeof(left) === 'number' && typeof(right) === 'number'){
-		
-		switch(operation){
-			case 'multiplication':
-				result = left * right;
-				break;
-			case 'subtraction':
-				result = left - right;
-				break;
-			case 'remainder':
-				result = left % right;
-				break;
-			case 'addition':
-				result = left + right;
-				break;
-			case 'division':
-				result = left / right;
-				break;
-		}
-	}
+
+  var result = add(left, right, operation)
 
 	if(id){
 
