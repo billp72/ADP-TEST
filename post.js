@@ -1,12 +1,12 @@
 const https = require("https");
 const querystring = require('querystring');
-const add = require('./calculate');
+const calc = require('./calculate');
 
 var request = {}
 
 request.postADP = function(left, right, id, operation, callback){
 
-  var result = add(left, right, operation)
+  var result = calc(left, right, operation)
 
 	if(id){
 
