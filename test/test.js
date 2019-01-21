@@ -9,11 +9,11 @@ const calc = require('../calculate');
 
 			api.get("https://interview.adpeai.com/api/v1/get-task").then(function(res){
 
-               var remainder2 = calc(res.left, res.right, res.operation);
+               var test = calc(res.left, res.right, res.operation);
                //assert.equal(sum1, sum2);
 
                request.postADP(res.left, res.right, res.id, res.operation, function(result, status){
-					expect(result).to.be.equal(remainder2);
+					expect(result).to.be.equal(test);
 					console.log("status is: "+status);
 
 					done();
