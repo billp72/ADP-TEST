@@ -5,7 +5,7 @@ const request = require('../post');
 const calc = require('../calculate');
 
    describe('calc()', function(){
-	    it('should find the remainder of two numbers', function(done){
+	    it('should add, subtract, divide, multiply, or find remainder of two numbers', function(done){
 
 			api.get("https://interview.adpeai.com/api/v1/get-task").then(function(res){
 
