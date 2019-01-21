@@ -17,7 +17,6 @@ request.postADP = function(left, right, id, operation, callback){
     };
     var stringPayload = querystring.stringify(payload);
 
-
     // Configure the request details
     var requestDetails = {
       'protocol' : 'https:',
