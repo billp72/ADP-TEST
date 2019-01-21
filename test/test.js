@@ -14,7 +14,7 @@ const calc = require('../calculate');
 
                request.postADP(res.left, res.right, res.id, res.operation, function(result, status){
 					expect(result).to.be.equal(test);
-					console.log("submit-task status: "+status);
+					console.log("submit-task: "+status);
 
 					done();
 				});
