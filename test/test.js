@@ -9,24 +9,17 @@ const calc = require('../calculate');
 
 			api.get("https://interview.adpeai.com/api/v1/get-task").then(function(res){
 
-               //arrange 
-               var l = 5,
-               	   r = 2;
-
-               var remainder1 = l % r,
-               	   remainder2 = calc(l, r, 'remainder');
-
-                expect(remainder1).to.be.equal(remainder2);
+               var remainder2 = calc(res.left, res.right, res.operation);
                //assert.equal(sum1, sum2);
 
-               request.postADP(res.left, res.right, res.id, res.operation, function(error){
-						if(error){
-							console.log(error)
-						}
-					
+               request.postADP(res.left, res.right, res.id, res.operation, function(result, status){
+					expect(result).to.be.equal(remainder2);
+					console.log("status is: "+status);
+
+					done();
 				});
 
-				done();
+				
 			});
 		
 		});

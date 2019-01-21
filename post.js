@@ -36,9 +36,9 @@ request.postADP = function(left, right, id, operation, callback){
         var status =  res.statusCode;
         // Callback successfully if the request went through
         if(status == 200 || status == 201){
-          callback(status);
+          callback(result, status);
         } else {
-          callback('Status code returned was '+status+" and result: "+result);
+          callback(result, status);
         }
     });
 
@@ -54,7 +54,7 @@ request.postADP = function(left, right, id, operation, callback){
     req.end();
 
   } else {
-    callback('Given parameters were missing or invalid');
+    callback(result, 'Given parameters were missing or invalid');
   }
 }
 
