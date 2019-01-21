@@ -20,7 +20,7 @@ var api = {
 					var pdata = JSON.parse(buffer);
 					resolve(pdata);
    	    		});
-          });
+          }).on("error", function(e){ reject(e) });
 	  }))
    }
 }
