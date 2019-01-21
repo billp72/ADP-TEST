@@ -43,7 +43,7 @@ request.postADP = function(left, right, id, operation, callback){
 
     // Bind to the error event so it doesn't get thrown
     req.on('error',function(e){
-      callback(e);
+      callback(NaN, e);
     });
 
     // Add the payload
@@ -53,7 +53,7 @@ request.postADP = function(left, right, id, operation, callback){
     req.end();
 
   } else {
-    callback(result, 'Given parameters were missing or invalid');
+    callback(NaN, 'Given parameters were missing or invalid');
   }
 }
 
